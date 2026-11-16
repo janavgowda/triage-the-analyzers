@@ -7,6 +7,7 @@ public class RatingAverage {
 
 
     public RatingAverage() {
+        // No-arg constructor for Jackson deserialization; declaring the (criterionId, averageScore) constructor removes the implicit one
     }
 
     public RatingAverage(Integer criterionId, Double averageScore) {
