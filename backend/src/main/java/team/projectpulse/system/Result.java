@@ -16,6 +16,7 @@ public class Result {
 
 
     public Result() {
+        // No-arg constructor for Jackson deserialization of the response envelope; declaring the other constructors removes the implicit one
     }
 
     public Result(boolean flag, Integer code, String message) {

@@ -7,4 +7,8 @@
 
      Unlike the baseline, this file may grow, but every entry is a reviewed decision. -->
 <FindBugsFilter>
+  <!-- D1 (turn off): every EI_EXPOSE_REP / EI_EXPOSE_REP2 finding is on a JPA @Entity getter/setter,
+       a DTO record, or a constructor of a Spring-injected bean. Defensive copies of entity collections
+       would break Hibernate's dirty checking and lazy loading, and copying injected beans is meaningless. -->
+  <Match><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
 </FindBugsFilter>
