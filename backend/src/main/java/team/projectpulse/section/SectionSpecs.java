@@ -4,7 +4,11 @@ import org.springframework.data.jpa.domain.Specification;
 
 import java.util.Locale;
 
-public class SectionSpecs {
+public final class SectionSpecs {
+
+    private SectionSpecs() {
+        // Static factory methods only; never instantiated
+    }
 
     public static Specification<Section> containsSectionName(String providedSectionName) {
         return (root, query, criteriaBuilder) ->
